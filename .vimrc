@@ -7,8 +7,14 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 Plug 'luochen1990/rainbow'
 
+Plug 'https://github.com/ryanoasis/vim-devicons'
+
+Plug 'https://github.com/vim-airline/vim-airline'
+
 Plug 'preservim/nerdtree'
 
+" The following are examples of different formats supported.
+" Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
 Plug 'tpope/vim-fugitive'
 " plugin from http://vim-scripts.org/vim/scripts.html
@@ -52,6 +58,7 @@ set softtabstop=2 "4 пробела в табе
 set autoindent
 " Подсвечиваем все что можно подсвечивать
 let javascript_highlight_all = 1
+" Включаем 256 цветов в терминале, мы ведь работаем из иксов?
 " Нужно во многих терминалах, например в gnome-terminal
 set t_Co=256
 set termguicolors
@@ -99,3 +106,15 @@ colorscheme darcula
 
 nnoremap Q gT
 nnoremap E gt
+
+" Use <c-space> to trigger completion.
+if has('nvim')
+  inoremap <silent><expr> <c-space> coc#refresh()
+else
+  inoremap <silent><expr> <c-@> coc#refresh()
+endif
+
+set tw=100
+set colorcolumn=100
+
+set encoding=UTF-8
