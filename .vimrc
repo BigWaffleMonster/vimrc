@@ -58,6 +58,7 @@ set softtabstop=2 "4 пробела в табе
 set autoindent
 " Подсвечиваем все что можно подсвечивать
 let javascript_highlight_all = 1
+let python_highlight_all = 1
 " Включаем 256 цветов в терминале, мы ведь работаем из иксов?
 " Нужно во многих терминалах, например в gnome-terminal
 set t_Co=256
@@ -71,6 +72,7 @@ autocmd BufRead *.py set smartindent cinwords=if,elif,else,for,while,try,except,
 syntax on "Включить подсветку синтаксиса
 
 set nu "Включаем нумерацию строк
+set relativenumber
 set mousehide "Спрятать курсор мыши когда набираем текст
 set mouse=a "Включить поддержку мыши
 set termencoding=utf-8 "Кодировка терминала
