@@ -46,10 +46,20 @@ nnoremap <C-n> :NERDTree<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <C-f> :NERDTreeFind<CR>
 
+let NERDTreeShowHidden=1
+
 let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle
 
+set path+=**
+
+set wildmenu
+
+command! MakeTags !ctags -R .
+
+nnoremap <S-t> <C-t>
+
 " Настройки табов для Python, согласно рекоммендациям
-set tabstop=2 
+set tabstop=2
 set shiftwidth=2
 set smarttab
 set expandtab "Ставим табы пробелами
@@ -76,7 +86,7 @@ set relativenumber
 set mousehide "Спрятать курсор мыши когда набираем текст
 set mouse=a "Включить поддержку мыши
 set termencoding=utf-8 "Кодировка терминала
-set novisualbell "Не мигать 
+set novisualbell "Не мигать
 set t_vb= "Не пищать! (Опции 'не портить текст', к сожалению, нету)
 " Удобное поведение backspace
 set backspace=indent,eol,start whichwrap+=<,>,[,]
